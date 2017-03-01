@@ -1,0 +1,62 @@
+@mixin createSkewButton($skew: $angel-skew) {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  padding: rem(12) rem(20);
+  border: 2px solid transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: rem(12);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: normal;
+  outline: none;
+  font-style: normal;
+  user-select: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+  z-index: 1;
+  color: #000;
+  background: none;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: inherit;
+    transform: skew($skew * -1);
+    background-color: $accent-color;
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $bg-color-2;
+    border-color: $accent-color;
+  }
+
+  &:active {
+    color: $accent-color;
+  }
+
+  &:active::before {
+    border-color: $accent-color;
+    // background-color: mix(#000, $accent-color, 10%);
+  }
+}
+
+.button-skew {
+  @include createSkewButton();
+}

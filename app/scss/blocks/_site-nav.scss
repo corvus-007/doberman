@@ -1,0 +1,31 @@
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.site-nav__list {
+  @include clear-list();
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: rem(12);
+}
+
+.site-nav__list li {
+  font-size: rem(12);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.site-nav__list a {
+  display: block;
+  padding: 1em rem(12);
+  color: currentColor;
+  text-decoration: none;
+  transition-duration: 0.15s;
+}
+
+.site-nav__list a:hover {
+  background-color: $accent-color;
+  color: #000;
+}

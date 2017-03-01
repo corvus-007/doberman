@@ -1,0 +1,22 @@
+.coaches {
+  @include clear-list();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coaches__item {
+  @include createFlexColumn(12);
+}
+
+
+@media (min-width: $media-mobile-up) {
+  .coaches__item {
+    @include createFlexColumn(6);
+  }
+}
+
+@media (min-width: $media-laptop-up) {
+  .coaches__item {
+    @include createFlexColumn(3);
+  }
+}

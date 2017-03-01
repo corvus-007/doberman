@@ -1,0 +1,27 @@
+.index-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.index-section__header {
+  margin-bottom: 70px;
+}
+
+.index-section__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: rem(36);
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.15;
+
+  span {
+    display: block;
+    color: $accent-color;
+  }
+}
+
+.index-section__body {
+
+}

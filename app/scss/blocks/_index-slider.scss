@@ -1,0 +1,110 @@
+.index-slider {
+  background-color: #2e353e;
+  background-image: url("images/bg-index-slider.jpg");
+  background-image: image-set(
+    url("images/bg-index-slider.jpg") 1x,
+    url("images/bg-index-slider@2x.jpg") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+
+  .slick-dots {
+    @include clear-list();
+    margin-top: 25px;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+
+    li {
+      margin-bottom: 0.5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    button {
+      display: block;
+      padding: 0;
+      overflow: hidden;
+      width: rem(13);
+      height: rem(13);
+      border: none;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      text-indent: -1000px;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      background-color: $accent-color;
+      user-select: none;
+    }
+
+    .slick-active button {
+      cursor: default;
+      background-color: $base-color;
+      pointer-events: none;
+    }
+  }
+
+}
+
+.index-slider__item {
+  font-style: italic;
+}
+
+.index-slider__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 600px;
+  padding: rem(50);
+  padding-top: 100px;
+  padding-bottom: 125px;
+  box-sizing: border-box;
+}
+
+.index-slider__row {
+  margin-bottom: rem(38);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.index-slider__column-title {
+  width: 65%;
+  // max-width: 500px;
+}
+
+.index-slider__column-text {
+  width: 40%;
+  // max-width: 315px;
+}
+
+.index-slider__title {
+  display: block;
+  font-size: rem(45);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: -0.15em;
+
+  span {
+    display: block;
+    color: $accent-color;
+  }
+}
+
+.index-slider__text {
+  margin-bottom: 0;
+}
+
+.index-slider__button {
+  // font-size: 1.5em;
+}

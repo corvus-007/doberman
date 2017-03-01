@@ -1,0 +1,55 @@
+$button-great-angle: $angel-skew;
+
+.button-great {
+  position: relative;
+  display: inline-block;
+  padding: 1.3em 1.7em;
+  padding-right: 6em;
+  border: 2px solid $accent-color;
+  transform: translate3d(0, 0, 0) skew($button-great-angle * -1);
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: normal;
+  outline: none;
+  font-size: 1rem;
+  font-style: italic;
+  user-select: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.button-great__revert {
+  transform: skew($button-great-angle);
+}
+
+.button-great__text {
+  
+}
+
+.button-great__accent {
+  display: block;
+  text-indent: 0.5em;
+}
+
+.button-great__additional {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+  box-sizing: border-box;
+  background-color: $accent-color;
+  transform: translate3d(1em, 1em, 0) ;
+  transition: transform 0.3s;
+  // will-change: transform;
+}
+
+.button-great:hover .button-great__additional {
+  transform: translate3d(1.5em, 1em, 0);
+}
+
+.button-great__icon {
+  color: #000;
+  width: rem(28);
+  height: rem(28);
+}

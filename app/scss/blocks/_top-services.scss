@@ -1,0 +1,29 @@
+.top-services {
+  overflow: hidden;
+}
+
+.top-services__items {
+  @include clear-list();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-services__item {
+  @include createFlexColumn();
+}
+
+@media (min-width: $media-mobile-up) {
+  .top-services__item {
+    @include createFlexColumn(6);
+  }
+}
+
+@media (min-width: $media-laptop-up) {
+  .top-services__items {
+    flex-wrap: nowrap;
+  }
+
+  .top-services__item {
+    @include createFlexColumn(3);
+  }
+}

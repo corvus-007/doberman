@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__image {
+  margin-right: 0.5em;
+}
+
+.logo__text {
+  max-width: rem(185);
+  margin: 0;
+  font-size: rem(14);
+  font-weight: normal;
+  color: $muted-color;
+}

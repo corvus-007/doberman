@@ -1,0 +1,47 @@
+.discount {
+  position: relative;
+  padding-left: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+  font-weight: 600;
+}
+
+.discount__content {
+  @include border-rounded(5px);
+  padding: 0.1em 0.3em;
+  display: inline-block;
+  background-color: $warning-color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    z-index: -1;
+    width: 44px;
+    height: 44px;
+    margin-left: 18px;
+    margin-top: -22px;
+    left: 2px;
+    top: 50%;
+    transform: scaleX(1.45) rotate(45deg);
+    background-color: inherit;
+    border-radius: 10px;
+  }
+
+  &::after {
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0.65em;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+}
