@@ -39,6 +39,7 @@ a {
   color: $link-color;
   text-decoration: none;
   outline: none;
+  transition-duration: 0.2s;
 
   &:not([class]) {
     text-decoration: underline;
@@ -47,14 +48,6 @@ a {
   &:hover {
     color: mix(#000, $link-color, 10%);
   }
-}
-
-.dotted-link {
-  border-bottom: 1px solid transparent;
-  background-image: linear-gradient(to right, currentColor 1px, transparent 0);
-  background-position: 0 100%;
-  background-size: 3px 1px;
-  background-repeat: repeat-x;
 }
 
 h1,

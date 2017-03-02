@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCAU9SAAvhu9MxzI5ffiB5hXSLHiC1GUX0"></script>
 </head>
 <body>
   <div class="site-wrapper">
@@ -137,7 +138,9 @@
         </div>
         <div class="index-section__body">
           <div class="plan">
-            <div class="plan__image"></div>
+            <div class="plan__image">
+              @@include('blocks/plan-draft.svg')
+            </div>
             <div class="plan__legend"></div>
           </div>
         </div>
@@ -178,6 +181,78 @@
           </div>
           <div class="container slider-images__arrows-holder"></div>
         </div>
+      </div>
+    </section>
+
+    <section class="club-cards">
+      <h2 class="visuallyhidden">Клубные карты</h2>
+      <div class="container">
+        <table class="club-cards__compare">
+          <thead>
+            <tr>
+              <th>
+                <img src="http://placehold.it/426x286/0af/fff" alt="" class="club-cards__image">
+                <a class="club-cards__button button-great" href="#">
+                  <div class="button-great__revert">
+                    <span class="button-great__text">
+                      <b class="button-great__accent">Дневная</b>
+                      клубная карта
+                    </span>
+                  </div>
+                  <div class="button-great__additional">
+                    <div class="button-great__revert">
+                      <svg class="button-great__icon svg-icon">
+                        <use xlink:href="images/symbols.svg#arrow-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </th>
+              <th>
+                <img src="http://placehold.it/426x286/2eb/fff" alt="" class="club-cards__image">
+                <a class="club-cards__button button-great" href="#">
+                  <div class="button-great__revert">
+                    <span class="button-great__text">
+                      <b class="button-great__accent">Безлимитная</b>
+                      клубная карта
+                    </span>
+                  </div>
+                  <div class="button-great__additional">
+                    <div class="button-great__revert">
+                      <svg class="button-great__icon svg-icon">
+                        <use xlink:href="images/symbols.svg#arrow-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Время посещения <span>с 10:00 до 17:00, с 00:00 до 07:00</span></td>
+              <td>Время посещения <span>неограниченно</span></td>
+            </tr>
+            <tr>
+              <td colspan="2">Вводная тренировка в тренажерном зале</td>
+            </tr>
+            <tr>
+              <td colspan="2">Вводная тренировка в зале групповых программ</td>
+            </tr>
+            <tr>
+              <td colspan="2">Посещение тренажерного зала</td>
+            </tr>
+            <tr>
+              <td colspan="2">Посещение групповых программ</td>
+            </tr>
+            <tr>
+              <td colspan="2">Посещение финской сауны</td>
+            </tr>
+            <tr>
+              <td colspan="2">Участие в клубных мероприятиях</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     
@@ -279,10 +354,48 @@
     </section>
 
     <div class="index-contacts">
-      
+      <h2 class="visuallyhidden">Контакты</h2>
+      <div class="contacts-map" id="contacts-map" style="height: 450px;"></div>
+      <div class="index-contacts__places container">
+        <div class="index-contacts__place">
+          <div class="contacts-info">
+            <div class="contacts-info__item">
+              г. Брянск <br>
+              ул. Куйбышева, 15А
+            </div>
+            <div class="contacts-info__item">
+              т. <a class="phone" href="tel:+7 (4832) 302-802">(4832) <span>302-802</span></a>
+            </div>
+            <div class="contacts-info__item">
+              Пн.–Пт., 8:00 – 00:00 <br>
+              Сб., Вс., 9:00 – 22:00
+            </div>
+            <div class="contacts-info__item">
+              <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 53.307273, "lng": 34.307051}' data-place-caption="1111">Показать на карте</a>
+              </div>
+          </div>
+        </div>
+        <div class="index-contacts__place">
+          <div class="contacts-info">
+            <div class="contacts-info__item">
+              г. Смоленск <br>
+              Трамвайный пр-д, 6А
+            </div>
+            <div class="contacts-info__item">
+              т. <a class="phone" href="tel:+7 (4834) 671-001">(4834) <span>671-001</span></a>
+            </div>
+            <div class="contacts-info__item">
+              Пн.–Пт., 8:00 – 00:00 <br>
+              Сб., Вс., 9:00 – 22:00
+            </div>
+            <div class="contacts-info__item">
+              <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 54.768407, "lng": 32.066878}' data-place-caption="2222">Показать на карте</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   @@include('blocks/site-footer.html')
-  @@include('blocks/popup-callback.html')
 </body>
 </html>

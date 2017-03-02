@@ -1,0 +1,29 @@
+.index-contacts {
+
+}
+
+.index-contacts__places {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.index-contacts__place {
+  flex-grow: 1;
+  flex-basis: 155px;
+  // padding-left: 10%;
+  // padding-right: 10%;
+  border-right: 1px solid #616982;
+  text-align: center;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+}

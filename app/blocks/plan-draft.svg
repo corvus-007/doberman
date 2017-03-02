@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350">
+  <title>plan-draft</title>
+  <rect width="140" height="145" fill="#8cc63f"/>
+  <rect x="140" width="230" height="145" fill="#00a99d"/>
+  <rect x="370" width="230" height="145" fill="#fcee21"/>
+  <rect y="145" width="140" height="205" fill="#a67c52"/>
+  <rect x="140" y="145" width="460" height="205" fill="#94f2ff"/>
+</svg>

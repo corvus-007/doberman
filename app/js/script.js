@@ -30,6 +30,7 @@ if ($sliderImages.length) {
     dots: true,
     centerMode: true,
     variableWidth: true,
+    autoplay: true,
     appendArrows: '.slider-images__arrows-holder',
     prevArrow: '<button type="button" class="slick-prev">\
       <svg class="slider-images__arrow-icon svg-icon">\
@@ -48,6 +49,16 @@ if ($sliderImages.length) {
 
 
 
+/*==================================
+=            Input mask            =
+==================================*/
+
+// Phone
+$('input[type="tel"]').mask("+7 (999) 999 99 99", {});
+
+/*=====  End of Input mask  ======*/
+
+
 
   /*====================================
   =            Inline popup            =
@@ -61,4 +72,83 @@ if ($sliderImages.length) {
   /*=====  End of Inline popup  ======*/
   
 
+
+  /*====================================
+  =            Contacts map            =
+  ====================================*/
+
+  var contactsMap = document.querySelector('#contacts-map');
+
+  if (contactsMap) {
+    initializeMap();
+  }
+
+  /*=====  End of Contacts map  ======*/
 });
+
+
+function initializeMap() {
+  var mapLocations = [];
+  var locationPlaces = document.querySelectorAll('[data-place-location]');
+  var ICONPATH = 'images/svg-icons/pin.svg';
+  var locationCenter = null;
+
+  Array.prototype.forEach.call(locationPlaces, function(place, i) {
+    var placeItem = {};
+
+    if (i === 0) {
+      locationCenter = getLocationCenter(place);
+      place.classList.add('contacts-info__trigger--active');
+    }
+
+    placeItem.position = getLocationCenter(place);
+    placeItem.title = place.dataset['place-caption'];
+    mapLocations.push(placeItem);
+
+  });
+
+
+  var mapProp = createProp(locationCenter);
+  var map = new google.maps.Map(document.getElementById("contacts-map"), mapProp);
+
+  mapLocations.forEach(function(mapLocation) {
+    addMarker(mapLocation);
+  });
+
+
+  $(locationPlaces).on('click', function(event) {
+    event.preventDefault();
+    $(locationPlaces).removeClass('contacts-info__trigger--active')
+    $(this).addClass('contacts-info__trigger--active')
+    map.panTo( getLocationCenter(this) );
+  });
+
+  function getLocationCenter(element) {
+    return JSON.parse(element.dataset.placeLocation);
+  }
+
+
+  function createProp(defaultLocation) {
+    return {
+      center: defaultLocation,
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false,
+      disableDefaultUI: true,
+      zoomControl: true,
+    };
+  }
+
+  function addMarker(markerOption) {
+    var svgIcon = {
+      url: ICONPATH,
+    };
+
+    var marker = new google.maps.Marker({
+      position: markerOption.position,
+      map: map,
+      title: markerOption.title,
+      icon: svgIcon
+    });
+  }
+}

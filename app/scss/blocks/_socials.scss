@@ -5,15 +5,22 @@
 }
 
 .socials__item {
-  display: inline-block;
+  // opacity: 0.75;
   vertical-align: middle;
-  width: 33px;
-  height: 33px;
+  width: rem(33);
+  height: rem(33);
   text-decoration: none;
-  margin-right: 0.7em;
+  margin-right: 1em;
+  transition: opacity 0.22s;
+  color: #2c303c;
+  transition: color 0.25s;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    // opacity: 1;
   }
 
   .svg-icon {

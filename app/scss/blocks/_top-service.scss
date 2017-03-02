@@ -15,14 +15,15 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba($bg-color-3, 0.6);
     z-index: 2;
-    transition: background-color 0.3s;
+    opacity: 0.6;
+    background-color: $bg-color-3;
+    transition: opacity 0.45s;
   }
 
   &:hover::before,
   &:focus::before {
-    background-color: rgba($bg-color-3, 0.8);
+    opacity: 0.8;
   }
 }
 
@@ -33,10 +34,10 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  transition: filter 0.3s;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: filter 0.45s;
 }
 
 .top-service:hover .top-service__bg {
@@ -70,7 +71,7 @@
 
 @media (min-width: $media-laptop-up) {
   .top-service {
-    overflow: visible;
+    // overflow: visible;
     // transform: skew($angel-skew * -1) translate3d(0, 0, 0);
   }
 

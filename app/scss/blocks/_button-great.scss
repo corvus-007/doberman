@@ -12,6 +12,7 @@ $button-great-angle: $angel-skew;
   line-height: normal;
   outline: none;
   font-size: 1rem;
+  text-align: left;
   font-style: italic;
   user-select: none;
   color: #fff;
@@ -41,7 +42,6 @@ $button-great-angle: $angel-skew;
   background-color: $accent-color;
   transform: translate3d(1em, 1em, 0) ;
   transition: transform 0.3s;
-  // will-change: transform;
 }
 
 .button-great:hover .button-great__additional {
@@ -50,6 +50,6 @@ $button-great-angle: $angel-skew;
 
 .button-great__icon {
   color: #000;
-  width: rem(28);
-  height: rem(28);
+  width: rem(30);
+  height: rem(30);
 }

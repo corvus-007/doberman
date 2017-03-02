@@ -1,15 +1,15 @@
 .slider-images {
   position: relative;
-  padding-bottom: 55px;
+  padding-bottom: 80px;
 
   .slick-prev {
     @include createSkewButton($angel-skew * -1);
-    left: 2rem;
+    left: 5rem;
   }
 
   .slick-next {
     @include createSkewButton($angel-skew);
-    right: 2rem;
+    right: 5rem;
   }
 
   .slick-arrow {
@@ -61,8 +61,8 @@
 }
 
 .slider-images__arrow-icon {
-  width: rem(28);
-  height: rem(28);
+  width: rem(30);
+  height: rem(30);
 }
 
 .slider-images__item {
@@ -80,7 +80,7 @@
     bottom: 0;
     background-color: $bg-color-3;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: opacity 1.3s;
   }
 }
 
@@ -101,5 +101,5 @@
   right: 0;
   top: 50%;
   z-index: 1;
-  transform: translateY(calc(-50% - 55px));
+  transform: translateY(calc(-50% - 80px));
 }

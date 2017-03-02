@@ -1,0 +1,47 @@
+.club-cards {
+  padding-bottom: 50px;
+  background-color: $bg-color-2;
+}
+
+.club-cards__compare {
+  border-spacing: 5px;
+  th,
+  td {
+    padding: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  thead {
+    th {
+      padding-bottom: rem(45);
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        td {
+          background-color: #232221;
+        }
+      }
+    }
+
+    td {
+      background-color: #131212;
+    }
+
+    span {
+      color: $accent-color;
+    }
+  }
+}
+
+.club-cards__image {
+  margin-top: -5rem;
+  margin-bottom: rem(30);
+}
+
+.club-cards__button {
+  
+}

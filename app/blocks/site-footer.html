@@ -1,7 +1,30 @@
 <footer class="site-footer">
-  Site footer
+  <div class="site-footer__inner container">
+    <div class="site-footer__socials socials">
+      <a class="socials__item" href="" title="Мы во Вконтакте">
+        <svg class="svg-icon">
+          <use xlink:href="images/symbols.svg#soc-vk"></use>
+        </svg>
+      </a>
+      <a class="socials__item" href="" title="Мы в Instagram">
+        <svg class="svg-icon">
+          <use xlink:href="images/symbols.svg#soc-instagram"></use>
+        </svg>
+      </a>
+      <a class="socials__item" href="" title="Мы в Однокласники">
+        <svg class="svg-icon">
+          <use xlink:href="images/symbols.svg#soc-ok"></use>
+        </svg>
+      </a>
+    </div>
+    <p class="site-footer__developer">
+      &copy; 2017 Сделано с <span>❤</span> в <a href="http://ideapix.ru">Идее Пикс</a>
+    </p>
+  </div>
 </footer>
 
-<script src="/js/jquery-3.1.1.min.js"></script>
-<script src="/js/plugins.js"></script>
+@@include('popup-callback.html')
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
