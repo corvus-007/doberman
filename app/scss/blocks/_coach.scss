@@ -26,11 +26,58 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // justify-content: space-around;
 }
 
 .coach__speciality-item {
-  border: 1px solid $accent-color;
   border-radius: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: rem(32);
+  height: rem(32);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.coach__speciality-item--sila {
+  background-image: url("images/speciality/sila.png");
+  background-image: image-set(
+    url("images/speciality/sila.png") 1x,
+    url("images/speciality/sila@2x.png") 2x
+  );
+}
+
+.coach__speciality-item--boi {
+  background-image: url("images/speciality/boi.png");
+  background-image: image-set(
+    url("images/speciality/boi.png") 1x,
+    url("images/speciality/boi@2x.png") 2x
+  );
+}
+
+.coach__speciality-item--aerobika {
+  background-image: url("images/speciality/aerobika.png");
+  background-image: image-set(
+    url("images/speciality/aerobika.png") 1x,
+    url("images/speciality/aerobika@2x.png") 2x
+  );
+}
+
+.coach__speciality-item--yoga {
+  background-image: url("images/speciality/yoga.png");
+  background-image: image-set(
+    url("images/speciality/yoga.png") 1x,
+    url("images/speciality/yoga@2x.png") 2x
+  );
+}
+
+.coach__speciality-text {
+  overflow: hidden;
+  text-indent: -1000px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .coach__speciality-icon {

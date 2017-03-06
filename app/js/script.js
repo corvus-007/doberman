@@ -118,7 +118,7 @@ $('input[type="tel"]').mask("+7 (999) 999 99 99", {});
 function initializeMap() {
   var mapLocations = [];
   var locationPlaces = document.querySelectorAll('[data-place-location]');
-  var ICONPATH = 'images/svg-icons/pin.svg';
+  var ICONPATH = 'images/map-pin.png';
   var locationCenter = null;
 
   Array.prototype.forEach.call(locationPlaces, function(place, i) {
