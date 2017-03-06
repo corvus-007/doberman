@@ -1,6 +1,6 @@
 .topbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
 }
 
 .topbar__inner {
@@ -15,8 +15,9 @@
 
 .topbar__callback {
   @include dotted-link();
+  font-size: rem(14);
 }
 
-.topbar__location {
+.topbar__sity-location {
 
 }

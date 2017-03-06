@@ -1,0 +1,59 @@
+.plan {
+
+}
+
+.plan-image {
+  svg {
+    vertical-align: middle;
+  }
+}
+
+#markers-areas {
+  pointer-events: none;
+}
+
+[id*="marker-area-"] {
+  transition: 0.6s;
+
+  text {
+    transition: 0.6s;
+  }
+}
+
+
+[id*="marker-area-"].active-area {
+  fill: #fff;
+
+  text {
+    fill: $bg-color-3;
+  }
+}
+
+.plan-area {
+  fill-opacity: 0.05;
+  fill: url(#diagonalHatch);
+  cursor: pointer;
+  transition: fill-opacity 0.6s;
+
+  &:hover,
+  &.active-area {
+    fill-opacity: 1;
+  }
+}
+
+
+@media (min-width: $media-laptop-up) {
+  .plan {
+    display: flex;
+  }
+
+  .plan-image {
+    @include createFlexColumn(9);
+    // margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  .plan-legend {
+    @include createFlexColumn(3);
+  }
+}

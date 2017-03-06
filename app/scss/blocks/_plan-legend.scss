@@ -1,0 +1,44 @@
+$dimensions: 26px;
+
+.plan-legend {
+  padding: 22px 30px;
+  background-color: #12171e;
+}
+
+.plan-legend__list {
+  @include clear-list();
+  counter-reset: legend-list;
+}
+
+.plan-legend__item {
+  margin-bottom: 22px;
+  transition: color 0.6s;
+
+  min-height: $dimensions;
+  position: relative;
+  padding-left: $dimensions + 20;
+
+  &::before {
+    counter-increment: legend-list;
+    content: counter(legend-list);
+    position: absolute;
+    left: 0;
+    top: -0.2em;
+    width: $dimensions;
+    height: $dimensions;
+    border: 2px solid;
+    line-height: $dimensions;
+    // box-sizing: border-box;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    // color: blue;
+  }
+
+  &:hover,
+  &.active-area {
+    color: $accent-color;
+    cursor: pointer;
+  }
+}

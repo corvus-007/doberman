@@ -138,10 +138,24 @@
         </div>
         <div class="index-section__body">
           <div class="plan">
-            <div class="plan__image">
+            <div style="position: absolute; overflow: hidden; width: 0; height: 0;">
+              @@include('blocks/diagonal-hatch.svg')
+            </div>
+            <div class="plan-image">
               @@include('blocks/plan-draft.svg')
             </div>
-            <div class="plan__legend"></div>
+            <div class="plan-legend">
+              <ol class="plan-legend__list">
+                <li class="plan-legend__item" data-area="area-1">
+                  Аэробный зал + Бойцовская зона
+                </li>
+                <li class="plan-legend__item" data-area="area-2">Тренажерный зал</li>
+                <li class="plan-legend__item" data-area="area-3">Женская раздевалка и душ</li>
+                <li class="plan-legend__item" data-area="area-4">Мужская раздевалка и душ</li>
+                <li class="plan-legend__item" data-area="area-5">Ресепшен</li>
+                <li class="plan-legend__item" data-area="area-6">Тренерская</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+  <defs>
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="40" height="40">
+      <g fill="#394352">
+        <polygon points="0 20 20 0 10 0 0 10"/>
+        <polygon points="0 40 40 0 30 0 0 30"/>
+        <polygon points="0 60 60 0 50 0 0 50"/>
+        <polygon points="0 80 80 0 70 0 0 70"/>
+      </g>
+    </pattern>
+  </defs>
+</svg>

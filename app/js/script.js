@@ -83,6 +83,34 @@ $('input[type="tel"]').mask("+7 (999) 999 99 99", {});
     initializeMap();
   }
 
+  /*============================
+  =            Plan            =
+  ============================*/
+  
+  var $plan = $('.plan');
+
+  if ($plan.length) {
+    var $planAreaItems = $('.plan-area');
+    var $planLegendItems = $('.plan-legend__item');
+    var areaID = null;
+
+    $planAreaItems.add($planLegendItems).hover(function() {
+      areaID = this.id || this.dataset.area;
+      $('#' + areaID )
+        .add('[data-area="'+areaID+'"]')
+        .add('#marker-' + areaID)
+          .addClass('active-area');
+    }, function() {
+      $('#' + areaID )
+        .add('[data-area="'+areaID+'"]')
+        .add('#marker-' + areaID)
+          .removeClass('active-area');
+    });
+  }
+
+  /*=====  End of Plan  ======*/
+  
+
   /*=====  End of Contacts map  ======*/
 });
 

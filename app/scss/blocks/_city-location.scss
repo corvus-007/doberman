@@ -1,0 +1,23 @@
+.city-location {
+  position: relative;
+  font-size: rem(14);
+  color: currentColor;
+  padding-left: 1.3em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1em;
+    height: 1em;
+    background: url("images/svg-icons/pin.svg") no-repeat 50%;
+    background-size: contain;
+  }
+}
+
+.city-location__text {
+  @include dotted-link();
+}
