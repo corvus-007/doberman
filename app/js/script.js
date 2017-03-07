@@ -17,6 +17,44 @@ document.addEventListener('DOMContentLoaded', function() {
   /*=====  End of Index slider  ======*/
 
 
+/*=====================================
+=            Sticky header            =
+=====================================*/
+
+
+if ('matchMedia' in window) {
+  if (matchMedia('(min-width: 1024px)').matches) {
+    var $topbar = $('.topbar');
+    var $header = $('.site-header');
+    var headerPosition = $header.offset();
+    var topbarHeight = $topbar.outerHeight();
+    var headerHeight = $header.outerHeight();
+    var scrollPosition = 0;
+
+    $topbar.css('margin-bottom', headerHeight + 'px');
+    $header
+      .addClass('site-header--sticky')
+      .css('top', topbarHeight + 'px');
+
+    $(window).on('scroll', function() {
+      scrollPosition = $(document).scrollTop();
+      if (headerPosition.top <= scrollPosition) {
+        $header.css('top', 0);
+      } else {
+        $header.css('top', topbarHeight + 'px');
+      }
+
+      console.log(headerPosition);
+      console.log(scrollPosition);
+    });
+  }
+}
+
+
+
+/*=====  End of Sticky header  ======*/
+
+
 
 /*=====================================
 =            Images slider            =
