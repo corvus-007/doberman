@@ -1,0 +1,32 @@
+.alert {
+  padding: 0.5em;
+  padding-left: 2.5em;
+  position: relative;
+  margin-bottom: 0.6em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    width: 22px;
+    height: 22px;
+    background-color: currentColor;
+  }
+
+  &--info {
+    color: $info-color;
+  }
+
+  &--success {
+    color: $success-color;
+  }
+
+  &--warning {
+    color: $warning-color;
+  }
+
+  &--danger {
+    color: $danger-color;
+  }
+}

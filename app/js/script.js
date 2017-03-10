@@ -1,9 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(function() {
+
 
   /*====================================
   =            Index slider            =
   ====================================*/
-  
+
   var indexSlider = document.querySelector('.index-slider');
 
   if (indexSlider) {
@@ -13,102 +14,158 @@ document.addEventListener('DOMContentLoaded', function() {
       arrows: false
     });
   }
-  
+
   /*=====  End of Index slider  ======*/
 
 
-/*=====================================
-=            Sticky header            =
-=====================================*/
+  /*=====================================
+  =            Sticky header            =
+  =====================================*/
 
 
-if ('matchMedia' in window) {
-  if (matchMedia('(min-width: 1024px)').matches) {
-    var $topbar = $('.topbar');
-    var $header = $('.site-header');
-    var headerPosition = $header.offset();
-    var topbarHeight = $topbar.outerHeight();
-    var headerHeight = $header.outerHeight();
-    var scrollPosition = 0;
+  if ('matchMedia' in window) {
+    if (matchMedia('(min-width: 1024px)').matches) {
+      var $header = $('.site-header');
+      var $topbar = $('.topbar');
+      var headerHeight = $header.innerHeight();
+      var topbarHeight = $topbar.innerHeight();
+      var headerPosition = $header.offset();
+      var scrollPosition = 0;
 
-    $topbar.css('margin-bottom', headerHeight + 'px');
-    $header
-      .addClass('site-header--sticky')
-      .css('top', topbarHeight + 'px');
+      $topbar.css('margin-bottom', headerHeight + 'px');
+      $header
+        .addClass('site-header--sticky')
+        .css('top', topbarHeight + 'px');
 
-    $(window).on('scroll', function() {
-      scrollPosition = $(document).scrollTop();
-      if (headerPosition.top <= scrollPosition) {
-        $header.css('top', 0);
-      } else {
-        $header.css('top', topbarHeight + 'px');
-      }
+      $(window).on('scroll', function() {
+        scrollPosition = $(document).scrollTop();
+        if (headerPosition.top <= scrollPosition) {
+          $header.css('top', 0);
+        } else {
+          $header.css('top', topbarHeight + 'px');
+        }
+      });
+    }
+  }
 
-      console.log(headerPosition);
-      console.log(scrollPosition);
+
+
+  /*=====  End of Sticky header  ======*/
+
+
+
+  /*=====================================
+  =            Images slider            =
+  =====================================*/
+
+  var $sliderImages = $('.js-slider-images');
+
+  if ($sliderImages.length) {
+    $sliderImages.slick({
+      accessibility: false,
+      dots: true,
+      centerMode: true,
+      variableWidth: true,
+      autoplay: true,
+      appendArrows: '.slider-images__arrows-holder',
+      prevArrow: '<button type="button" class="slick-prev">\
+        <svg class="slider-images__arrow-icon svg-icon">\
+          <use xlink:href="images/symbols.svg#arrow-prev"></use>\
+        </svg>\
+      </button>',
+      nextArrow: '<button type="button" class="slick-next">\
+        <svg class="slider-images__arrow-icon svg-icon">\
+          <use xlink:href="images/symbols.svg#arrow-next"></use>\
+        </svg>\
+      </button>',
     });
   }
-}
+
+  /*=====  End of Images slider  ======*/
 
 
 
-/*=====  End of Sticky header  ======*/
+  /*==================================
+  =            Input mask            =
+  ==================================*/
 
+  // Phone
+  $('input[type="tel"]').mask("+7 (999) 999 99 99", {});
 
-
-/*=====================================
-=            Images slider            =
-=====================================*/
-
-var $sliderImages = $('.js-slider-images');
-
-if ($sliderImages.length) {
-  $sliderImages.slick({
-    accessibility: false,
-    dots: true,
-    centerMode: true,
-    variableWidth: true,
-    autoplay: true,
-    appendArrows: '.slider-images__arrows-holder',
-    prevArrow: '<button type="button" class="slick-prev">\
-      <svg class="slider-images__arrow-icon svg-icon">\
-        <use xlink:href="images/symbols.svg#arrow-prev"></use>\
-      </svg>\
-    </button>',
-    nextArrow: '<button type="button" class="slick-next">\
-      <svg class="slider-images__arrow-icon svg-icon">\
-        <use xlink:href="images/symbols.svg#arrow-next"></use>\
-      </svg>\
-    </button>',
-  });
-}
-
-/*=====  End of Images slider  ======*/
-
-
-
-/*==================================
-=            Input mask            =
-==================================*/
-
-// Phone
-$('input[type="tel"]').mask("+7 (999) 999 99 99", {});
-
-/*=====  End of Input mask  ======*/
+  /*=====  End of Input mask  ======*/
 
 
 
   /*====================================
   =            Inline popup            =
   ====================================*/
-  
+
   $('.js-trigger-inline-popup').magnificPopup({
     mainClass: 'popup-fade',
     removalDelay: 300
   });
-  
+
   /*=====  End of Inline popup  ======*/
-  
+
+
+  /*============================
+  =            Plan            =
+  ============================*/
+
+  var $plan = $('.plan');
+
+  if ($plan.length) {
+    var $planAreaItems = $('.plan-area');
+    var $planLegendItems = $('.plan-legend__item');
+    var areaID = null;
+
+    $planAreaItems.add($planLegendItems).hover(function() {
+      areaID = this.id || this.dataset.area;
+      $('#' + areaID)
+        .add('[data-area="' + areaID + '"]')
+        .add('#marker-' + areaID)
+        .addClass('active-area');
+    }, function() {
+      $('#' + areaID)
+        .add('[data-area="' + areaID + '"]')
+        .add('#marker-' + areaID)
+        .removeClass('active-area');
+    });
+  }
+
+  /*=====  End of Plan  ======*/
+
+
+  /*================================
+  =            Schedule            =
+  ================================*/
+
+  var $schedule = $('.schedule');
+  var $scheduleContent = $('.schedule__content');
+  var $scheduleControlsItems = $('.schedule__control');
+  var initValue = 0;
+  var prevInit = 0;
+  var MAX_VALUE = 0;
+  var MIN_VALUE = -40;
+
+  $scheduleControlsItems.on('click', function(event) {
+    event.preventDefault();
+    prevInit = initValue;
+    var direction = this.dataset.scheduleControl;
+    if (direction === 'prev') {
+      initValue += 20;
+    } else if (direction === 'next') {
+      initValue -= 20;
+    }
+    if ((initValue >= MIN_VALUE) && (initValue <= MAX_VALUE)) {
+      $scheduleContent.css('transform', 'translateX(' + initValue + '%)');
+    } else {
+      initValue = prevInit;
+    }
+  });
+
+  /*=====  End of Schedule  ======*/
+
 
 
   /*====================================
@@ -121,35 +178,8 @@ $('input[type="tel"]').mask("+7 (999) 999 99 99", {});
     initializeMap();
   }
 
-  /*============================
-  =            Plan            =
-  ============================*/
-  
-  var $plan = $('.plan');
-
-  if ($plan.length) {
-    var $planAreaItems = $('.plan-area');
-    var $planLegendItems = $('.plan-legend__item');
-    var areaID = null;
-
-    $planAreaItems.add($planLegendItems).hover(function() {
-      areaID = this.id || this.dataset.area;
-      $('#' + areaID )
-        .add('[data-area="'+areaID+'"]')
-        .add('#marker-' + areaID)
-          .addClass('active-area');
-    }, function() {
-      $('#' + areaID )
-        .add('[data-area="'+areaID+'"]')
-        .add('#marker-' + areaID)
-          .removeClass('active-area');
-    });
-  }
-
-  /*=====  End of Plan  ======*/
-  
-
   /*=====  End of Contacts map  ======*/
+
 });
 
 
@@ -186,7 +216,7 @@ function initializeMap() {
     event.preventDefault();
     $(locationPlaces).removeClass('contacts-info__trigger--active')
     $(this).addClass('contacts-info__trigger--active')
-    map.panTo( getLocationCenter(this) );
+    map.panTo(getLocationCenter(this));
   });
 
   function getLocationCenter(element) {

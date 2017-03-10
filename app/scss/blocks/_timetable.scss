@@ -1,0 +1,95 @@
+table.tt_timetable {
+  margin: 0;
+  width: calc(100% + (100% / 5) * 2);
+  table-layout: fixed;
+  // border-spacing: 1px !important;
+  border-collapse: collapse !important;
+  font-family: $primary-font;
+  background: none !important;
+  font-size: rem(14);
+  color: inherit;
+}
+
+.tt_timetable tr,
+.tt_timetable .row_gray {
+  background: none !important;
+}
+
+.tt_timetable th,
+.tt_timetable td {
+  width: 20%;
+}
+
+.tt_timetable th {
+  border-bottom: 2px solid #fff !important;
+  background: #fff;
+  color: $bg-color-3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tt_timetable .event {
+  background: $bg-events !important;
+  transition: 0.4s;
+  border: 2px solid $bg-color-1 !important;
+
+  &:hover {
+    background: $bg-color-4 !important;
+  }
+}
+
+.tt_timetable .event hr {
+  height: 2px;
+  background: $bg-color-1;
+  opacity: 1;
+}
+
+.tt_timetable .event_container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tt_timetable .event .bottom_hour, .event_layout_4 .tt_timetable .event .top_hour {
+  display: none;
+}
+
+
+.tt_timetable .event .top_hour {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.tt_timetable .hours {
+  font-size: rem(24);
+  font-weight: normal;
+}
+
+.tt_timetable .event a, .tt_timetable .event a.event_header {
+  margin-bottom: 15px;
+  color: $accent-color !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.2em;
+  display: block;
+  flex-grow: 1;
+  min-height: calc(1.2em * 2);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tt_timetable .event .before_hour_text, .tt_timetable .event .after_hour_text {
+  order: 1;
+  font-size: rem(14);
+}
+
+.tt_timetable .event .before_hour_text {
+  color: $muted-color;
+  margin-bottom: 15px;
+}
+
+.tt_timetable .event .after_hour_text {
+
+}

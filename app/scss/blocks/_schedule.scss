@@ -1,0 +1,38 @@
+.schedule {
+
+}
+
+.schedule__content-wrapper {
+  margin-left: 45px;
+  margin-right: 45px;
+  overflow-x: hidden;
+}
+
+.schedule__content {
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.35s linear;
+}
+
+.schedule__controls {
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.schedule__control {
+  position: absolute;
+  width: 45px;
+  height: 60px;
+  border: none;
+  background-color: $bg-events;
+  color: $accent-color;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}

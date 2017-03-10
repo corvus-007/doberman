@@ -16,7 +16,7 @@
   font-style: normal;
   user-select: none;
   box-sizing: border-box;
-  transition: background-color 0.2s, color 0.2s;
+  transition: 0.3s;
   cursor: pointer;
   z-index: 1;
   color: #000;
@@ -33,7 +33,7 @@
     border: inherit;
     transform: skew($skew * -1);
     background-color: $accent-color;
-    transition: 0.2s;
+    transition: 0.3s;
   }
 
   &:hover,

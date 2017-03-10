@@ -31,6 +31,12 @@ body {
   color: $base-color;
 }
 
+body:not(.homepage) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   @include container();
 }
