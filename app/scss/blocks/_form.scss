@@ -20,30 +20,37 @@
 
 .form-control {
   @include border-rounded();
-  padding: em(14, 18) em(24, 18);
+  padding: rem(15) em(15);
   width: 100%;
   outline: none;
   border: 2px solid transparent;
-  background: #edeef1;
   font: inherit;
-  font-size: rem(18);
+  font-size: rem(15);
   line-height: normal;
+  color: #fff;
+  background: #2d333b;
   box-sizing: border-box;
   transition: 0.3s;
+
+  &::placeholder {
+    color: #8792a2;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #000;
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
 }
 
 textarea.form-control {
   max-height: 200px;
   resize: vertical;
-}
-
-.form-control:hover {
-  background: #f9f9f9;
-}
-
-.form-control:focus {
-  border-color: mix(#000, #e3e3e1, 7%);
-  background: #fff;
 }
 
 .form-submit-wrapper {

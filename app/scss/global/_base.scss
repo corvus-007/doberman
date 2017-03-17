@@ -56,6 +56,10 @@ a {
   }
 }
 
+.dotted-link {
+  @include dotted-link();
+}
+
 h1,
 h2,
 h3,
@@ -87,13 +91,20 @@ h4,
 
 p {
   margin-top: 0;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.8em;
 }
 
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+}
+
+hr {
+  height: 2px;
+  margin: 50px 0;
+  border: none;
+  background-color: $bg-events;
 }
 
 .visuallyhidden:not(:focus):not(:active) {

@@ -6,13 +6,13 @@
   &:hover,
   &:focus {
     color: $textColor;
-    background-color: mix(#fff, $bgColor, 10%);
+    background-color: #ffc600;
     outline: none;
   }
 
   &:active {
     color: $textColor;
-    background-color: mix(#000, $bgColor, 10%);
+    background-color: mix(#000, #ffc600, 10%);
   }
 }
 

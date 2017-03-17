@@ -23,8 +23,9 @@
   color: currentColor;
   text-decoration: none;
   transition-duration: 0.15s;
-}
 
-.site-nav__list a:hover {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }

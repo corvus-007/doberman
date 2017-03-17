@@ -136,12 +136,12 @@
         </h2>
       </div>
       <div class="index-section__body">
+        <div style="position: absolute; overflow: hidden; width: 0; height: 0;">
+          @@include('blocks/diagonal-hatch.svg')
+        </div>
         <div class="plan">
-          <div style="position: absolute; overflow: hidden; width: 0; height: 0;">
-            @@include('blocks/diagonal-hatch.svg')
-          </div>
           <div class="plan-image">
-            @@include('blocks/bryansk-plan.svg')
+            @@include('blocks/plan-bryansk.svg')
           </div>
           <div class="plan-legend">
             <ol class="plan-legend__list">
@@ -153,6 +153,25 @@
               <li class="plan-legend__item" data-area="area-4">Мужская раздевалка и душ</li>
               <li class="plan-legend__item" data-area="area-5">Ресепшен</li>
               <li class="plan-legend__item" data-area="area-6">Тренерская</li>
+            </ol>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-image">
+            @@include('blocks/plan-smolensk.svg')
+          </div>
+          <div class="plan-legend">
+            <ol class="plan-legend__list">
+              <li class="plan-legend__item" data-area="area-1">Тренажерный зал</li>
+              <li class="plan-legend__item" data-area="area-2">Зал групповых + бойцовский зал</li>
+              <li class="plan-legend__item" data-area="area-3">Кардиозона</li>
+              <li class="plan-legend__item" data-area="area-4">Кроссфит зона</li>
+              <li class="plan-legend__item" data-area="area-5">Мужская раздевалка</li>
+              <li class="plan-legend__item" data-area="area-6">Женская раздевалка</li>
+              <li class="plan-legend__item" data-area="area-7">Массажный кабинет</li>
+              <li class="plan-legend__item" data-area="area-8">Рецепция</li>
+              <li class="plan-legend__item" data-area="area-9">Тренерская</li>
+              <li class="plan-legend__item" data-area="area-10">Гардероб</li>
             </ol>
           </div>
         </div>
@@ -304,7 +323,7 @@
               </li>
             </ul>
             <h3 class="coach__name">Михалев Евгений</h3>
-            <a class="coach__more-link" href="#">Читать о тренере</a>
+            <a class="coach__more-link js-trigger-inline-popup" href="#popup-sport-bio">Читать о тренере</a>
           </li>
           <li class="coaches__item coach">
             <div class="coach__image-holder">
@@ -325,7 +344,7 @@
               </li>
             </ul>
             <h3 class="coach__name">Жилин Андрей</h3>
-            <a class="coach__more-link" href="#">Читать о тренере</a>
+            <a class="coach__more-link js-trigger-inline-popup" href="#popup-sport-bio">Читать о тренере</a>
           </li>
           <li class="coaches__item coach">
             <div class="coach__image-holder">
@@ -340,7 +359,7 @@
               </li>
             </ul>
             <h3 class="coach__name">Аверченкова Анастасия</h3>
-            <a class="coach__more-link" href="#">Читать о тренере</a>
+            <a class="coach__more-link js-trigger-inline-popup" href="#popup-sport-bio">Читать о тренере</a>
           </li>
           <li class="coaches__item coach">
             <div class="coach__image-holder">
@@ -355,7 +374,7 @@
               </li>
             </ul>
             <h3 class="coach__name">Чачин Максим</h3>
-            <a class="coach__more-link" href="#">Читать о тренере</a>
+            <a class="coach__more-link js-trigger-inline-popup" href="#popup-sport-bio">Читать о тренере</a>
           </li>
         </ul>
       </div>
@@ -365,11 +384,11 @@
   <div class="index-contacts">
     <h2 class="visuallyhidden">Контакты</h2>
     <div class="contacts-map" id="contacts-map" style="height: 450px;"></div>
-    <div class="index-contacts__places container">
-      <div class="index-contacts__place">
+    <div class="index-contacts__places contacts__places container">
+      <div class="index-contacts__place contacts__place">
         <div class="contacts-info">
           <div class="contacts-info__item">
-            г. Брянск <br>
+            г. Брянск, <br>
             ул. Куйбышева, 15А
           </div>
           <div class="contacts-info__item">
@@ -380,14 +399,14 @@
             Сб., Вс., 9:00 – 22:00
           </div>
           <div class="contacts-info__item">
-            <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 53.307273, "lng": 34.307051}' data-place-caption="1111">Показать на карте</a>
+            <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 53.307273, "lng": 34.307051}' data-place-caption="г. Брянск, ул. Куйбышева, 15А">Показать на карте</a>
             </div>
         </div>
       </div>
-      <div class="index-contacts__place">
+      <div class="index-contacts__place contacts__place">
         <div class="contacts-info">
           <div class="contacts-info__item">
-            г. Смоленск <br>
+            г. Смоленск, <br>
             Трамвайный пр-д, 6А
           </div>
           <div class="contacts-info__item">
@@ -398,7 +417,7 @@
             Сб., Вс., 9:00 – 22:00
           </div>
           <div class="contacts-info__item">
-            <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 54.768407, "lng": 32.066878}' data-place-caption="2222">Показать на карте</a>
+            <a class="contacts-info__trigger" href="#" data-place-location='{"lat": 54.768407, "lng": 32.066878}' data-place-caption="г. Смоленск, Трамвайный пр-д, 6А">Показать на карте</a>
           </div>
         </div>
       </div>

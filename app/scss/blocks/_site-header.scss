@@ -1,16 +1,15 @@
 .site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
   padding-top: rem(15);
   padding-bottom: rem(8);
   background-color: $bg-color-3;
-  transition: 0.3s;
   box-shadow: 0 2px 19px 0 #070606;
+  z-index: 2;
 
   &--sticky {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
   }
 }
 

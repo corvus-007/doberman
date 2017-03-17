@@ -1,6 +1,4 @@
 $(function() {
-
-
   /*====================================
   =            Index slider            =
   ====================================*/
@@ -17,38 +15,55 @@ $(function() {
 
   /*=====  End of Index slider  ======*/
 
+  /*===================================
+  =            Choice city            =
+  ===================================*/
+
+  var homepageURL = document.querySelector('.site-header__logo').href;
+  var $citiesItemsLink = $('.cities__link');
+  var cityLocationText = document.querySelector('.city-location__text');
+  var currentCity = '';
+  $citiesItemsLink.each(function() {
+    if (this.href === homepageURL) {
+      this.parentElement.classList.add('cities__item--active');
+      currentCity = this.textContent;
+    }
+  });
+  cityLocationText.textContent = currentCity;
+
+  /*=====  End of Choice city  ======*/
+
 
   /*=====================================
   =            Sticky header            =
   =====================================*/
 
+  var $header = $('.site-header');
+  var $topbar = $('.topbar');
+  var headerHeight = $header.innerHeight();
+  var topbarHeight = $topbar.innerHeight();
+  var scrollPosition = 0;
+
+  $topbar.css('margin-bottom', headerHeight + 'px');
+  $header.css('top', topbarHeight + 'px');
 
   if ('matchMedia' in window) {
     if (matchMedia('(min-width: 1024px)').matches) {
-      var $header = $('.site-header');
-      var $topbar = $('.topbar');
-      var headerHeight = $header.innerHeight();
-      var topbarHeight = $topbar.innerHeight();
-      var headerPosition = $header.offset();
-      var scrollPosition = 0;
-
-      $topbar.css('margin-bottom', headerHeight + 'px');
-      $header
-        .addClass('site-header--sticky')
-        .css('top', topbarHeight + 'px');
 
       $(window).on('scroll', function() {
         scrollPosition = $(document).scrollTop();
-        if (headerPosition.top <= scrollPosition) {
-          $header.css('top', 0);
+        if (topbarHeight <= scrollPosition) {
+          $header
+            .css('top', 0)
+            .addClass('site-header--sticky');
         } else {
-          $header.css('top', topbarHeight + 'px');
+          $header
+            .css('top', topbarHeight + 'px')
+            .removeClass('site-header--sticky');
         }
       });
     }
   }
-
-
 
   /*=====  End of Sticky header  ======*/
 
@@ -185,22 +200,29 @@ $(function() {
 
 function initializeMap() {
   var mapLocations = [];
+  var markers = [];
   var locationPlaces = document.querySelectorAll('[data-place-location]');
-  var ICONPATH = 'images/map-pin.png';
+  var ICONPATH = 'images/map-pin.svg';
+  var ICONPATH = 'http://ideatech.ru/wp-content/themes/doberman/images/map-pin.svg';
   var locationCenter = null;
 
   Array.prototype.forEach.call(locationPlaces, function(place, i) {
     var placeItem = {};
 
-    if (i === 0) {
-      locationCenter = getLocationCenter(place);
-      place.classList.add('contacts-info__trigger--active');
+    if ($('.js-show-map').length) {
+      if (i === 0) {
+        locationCenter = getLocationCenter(place);
+      }
+    } else {
+      if (i === 0) {
+        place.classList.add('contacts-info__trigger--active');
+        locationCenter = getLocationCenter(place);
+      }
     }
-
     placeItem.position = getLocationCenter(place);
-    placeItem.title = place.dataset['place-caption'];
-    mapLocations.push(placeItem);
+    placeItem.title = place.dataset.placeCaption;
 
+    mapLocations.push(placeItem);
   });
 
 
@@ -211,12 +233,32 @@ function initializeMap() {
     addMarker(mapLocation);
   });
 
+  if ($('.js-show-map').length) {
+    clearMarkers();
+  }
+
 
   $(locationPlaces).on('click', function(event) {
     event.preventDefault();
-    $(locationPlaces).removeClass('contacts-info__trigger--active')
-    $(this).addClass('contacts-info__trigger--active')
+    if (!$('.js-show-map').length) {
+      $(locationPlaces).removeClass('contacts-info__trigger--active')
+      $(this).addClass('contacts-info__trigger--active')
+    }
     map.panTo(getLocationCenter(this));
+  });
+
+  $('.js-show-map').on('click', function(event) {
+    event.preventDefault();
+    $('.contacts__places-holder').addClass('contacts__places-holder--closed');
+    $('.contacts__toggle').removeClass('contacts__toggle--hidden');
+    showMarkers();
+  });
+
+  $('.js-hide-map').on('click', function(event) {
+    event.preventDefault();
+    $('.contacts__places-holder').removeClass('contacts__places-holder--closed');
+    $('.contacts__toggle').addClass('contacts__toggle--hidden');
+    clearMarkers();
   });
 
   function getLocationCenter(element) {
@@ -232,9 +274,46 @@ function initializeMap() {
       scrollwheel: false,
       disableDefaultUI: true,
       zoomControl: true,
+      styles: [{
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#1c2128"
+        }]
+      }, {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [{
+          "color": "#c3cfe0"
+        }]
+      }, {
+        "featureType": "poi",
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+          "color": "#000"
+        }]
+      }, {
+        "featureType": "road",
+        "stylers": [{
+          "color": "#464f5c"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels.text",
+        "stylers": [{
+          "color": "#d5e1f3"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+          "color": "#fff"
+        }]
+      }]
     };
   }
 
+  // Adds a marker to the map and push to the array.
   function addMarker(markerOption) {
     var svgIcon = {
       url: ICONPATH,
@@ -246,5 +325,23 @@ function initializeMap() {
       title: markerOption.title,
       icon: svgIcon
     });
+    markers.push(marker);
+  }
+
+  // Sets the map on all markers in the array.
+  function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);
+    }
+  }
+
+  // Removes the markers from the map, but keeps them in the array.
+  function clearMarkers() {
+    setMapOnAll(null);
+  }
+
+  // Shows any markers currently in the array.
+  function showMarkers() {
+    setMapOnAll(map);
   }
 }

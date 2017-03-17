@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Контактная информация</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCAU9SAAvhu9MxzI5ffiB5hXSLHiC1GUX0"></script>
+
+</head>
+<body>
+  @@include('blocks/site-header.html')
+  <main class="page-body">
+    <h1 class="page-title container">
+      Контактная информация
+    </h1>
+
+    <div class="page-content">
+      <div class="container">
+        <p>Мы будем рады получить от вас любую обратную связь. <a class="dotted-link" href="#">Напишите нам!</a></p>
+        <div class="alert alert--info">
+          По вопросам приобретения франшизы, пишите нам по адресу <a href="mailto:fr@doberman-fit.ru">fr@doberman-fit.ru</a>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="contacts-map" id="contacts-map" style="height: 450px;"></div>
+        <div class="container">
+          <button class="contacts__toggle contacts__toggle--hidden js-hide-map" type="button">Закрыть карту</button>
+        </div>
+        <div class="contacts__places-holder container">
+          <div class="contacts__places">
+            <div class="contacts__place">
+              <div class="contacts-info">
+                <div class="contacts-info__item">
+                  г. Брянск, <br>
+                  ул. Куйбышева, 15А
+                </div>
+                <div class="contacts-info__item">
+                  т. <a class="phone" href="tel:+7 (4832) 302-802">(4832) <span>302-802</span></a>
+                </div>
+                <div class="contacts-info__item">
+                  Пн.–Пт., 8:00 – 00:00 <br>
+                  Сб., Вс., 9:00 – 22:00
+                </div>
+                <div class="contacts-info__item">
+                  <a class="contacts-info__trigger js-show-map" href="#" data-place-location='{"lat": 53.307273, "lng": 34.307051}' data-place-caption="г. Брянск, ул. Куйбышева, 15А">Показать на карте</a>
+                  </div>
+              </div>
+            </div>
+            <div class="contacts__place">
+              <div class="contacts-info">
+                <div class="contacts-info__item">
+                  г. Смоленск, <br>
+                  Трамвайный пр-д, 6А
+                </div>
+                <div class="contacts-info__item">
+                  т. <a class="phone" href="tel:+7 (4834) 671-001">(4834) <span>671-001</span></a>
+                </div>
+                <div class="contacts-info__item">
+                  Пн.–Пт., 8:00 – 00:00 <br>
+                  Сб., Вс., 9:00 – 22:00
+                </div>
+                <div class="contacts-info__item">
+                  <a class="contacts-info__trigger js-show-map" href="#" data-place-location='{"lat": 54.768407, "lng": 32.066878}' data-place-caption="г. Смоленск, Трамвайный пр-д, 6А">Показать на карте</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('blocks/site-footer.html')
+</body>
+</html>

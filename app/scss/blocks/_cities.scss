@@ -1,0 +1,23 @@
+.cities {
+  @include clear-list();
+}
+
+.cities__item {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.cities__link {
+  display: inline-block;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+
+.cities__item--active .cities__link {
+  color: $base-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}

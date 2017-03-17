@@ -1,0 +1,46 @@
+.post-content {
+
+  .alignleft,
+  .alignright,
+  .aligncenter {
+    max-width: 100%;
+    height: auto;
+    margin: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  img.alignleft,
+  img.alignright,
+  img.aligncenter {
+    // border: 1em solid $accentColorLight;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: 1.5em;
+  }
+  
+  .alignright {
+    float: right;
+    margin-left: 1.5em;
+  }
+
+  .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (min-width: $media-laptop-up) {
+  .post-content {
+
+    .alignleft,
+    .alignright,
+    .aligncenter {
+      width: 70%;
+    }
+  }
+}

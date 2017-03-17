@@ -1,0 +1,45 @@
+.custom-select {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  color: #fff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+    right: 17px;
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  select {
+    padding-right: 34px;
+    appearance: none;
+    color: currentColor;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:checked {
+      background-color: #d41;
+    }
+  }
+
+  option {
+    color: #000;
+    &:disabled {
+      // color: $light-color;
+    }
+  }
+}

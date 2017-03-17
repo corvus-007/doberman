@@ -1,5 +1,5 @@
 .index-slider {
-  background-color: #2e353e;
+  background-color: #080b12;
   background-image: url("images/bg-index-slider.jpg");
   background-image: image-set(
     url("images/bg-index-slider.jpg") 1x,
@@ -7,7 +7,7 @@
   );
   background-repeat: no-repeat;
   background-position: left;
-  background-size: cover;
+  background-size: contain;
 
   .slick-dots {
     @include clear-list();
@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 600px;
+  // min-height: calc(100vh - 50px);
   padding: rem(50);
   padding-top: 100px;
   padding-bottom: 125px;
@@ -103,6 +104,7 @@
 
 .index-slider__text {
   margin-bottom: 0;
+  font-size: rem(16);
 }
 
 .index-slider__button {

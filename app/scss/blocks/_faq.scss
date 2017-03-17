@@ -1,0 +1,16 @@
+.faq {
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    letter-spacing: 0.025em;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5rem 4rem;
+    font-size: rem(16);
+    color: $light-color;
+  }
+}

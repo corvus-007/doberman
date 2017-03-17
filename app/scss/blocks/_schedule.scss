@@ -1,5 +1,5 @@
 .schedule {
-
+  margin-top: 50px;
 }
 
 .schedule__content-wrapper {
@@ -35,4 +35,9 @@
   &--next {
     right: 0;
   }
+}
+
+
+.tabs_box_navigation.sf-timetable-menu {
+  display: none;
 }

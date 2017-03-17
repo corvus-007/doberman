@@ -1,6 +1,7 @@
 .contacts-info {
   display: inline-block;
   text-align: left;
+  font-size: rem(15);
 }
 
 .contacts-info__item {
@@ -19,6 +20,6 @@
 
 .contacts-info__trigger--active {
   // color: $accent-color;
-  opacity: 0.5;
+  opacity: 0.6;
   pointer-events: none;
 }

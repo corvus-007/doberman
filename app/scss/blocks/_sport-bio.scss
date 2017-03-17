@@ -1,0 +1,57 @@
+.sport-bio {
+  color: #a8adb7;
+  font-size: rem(15);
+}
+
+.sport-bio__columns {
+  display: flex;
+}
+
+.sport-bio__column {
+  flex-grow: 1;
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sport-bio__photo-wrapper {
+  min-width: 150px;
+  margin-bottom: 0;
+}
+
+.sport-bio__scrollwrap {
+  max-height: 400px;
+  overflow: auto;
+  padding-right: 1em;
+  margin-right: -1em;
+}
+
+.sport-bio__name {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: rem(24);
+  color: #fff;
+}
+
+.sport-bio__who {
+  display: block;
+  margin-bottom: 0.6em;
+  font-size: 14px;
+  line-height: 16px;
+  color: $muted-color;
+}
+
+.sport-bio__speciality {
+  justify-content: flex-start;
+}
+
+.sport-bio h3 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: rem(18);
+  color: #fff;
+}

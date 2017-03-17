@@ -2,6 +2,7 @@ $dimensions: 26px;
 
 .plan-legend {
   padding: 22px 30px;
+  font-size: rem(15);
   background-color: #12171e;
 }
 
@@ -17,6 +18,10 @@ $dimensions: 26px;
   min-height: $dimensions;
   position: relative;
   padding-left: $dimensions + 20;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &::before {
     counter-increment: legend-list;

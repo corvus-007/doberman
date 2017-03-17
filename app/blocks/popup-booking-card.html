@@ -1,0 +1,29 @@
+<div id="popup-booking-card" class="popup popup-booking-card mfp-hide">
+  <div class="popup__title">Карта для трени</div>
+  <form class="form booking-card-form" action="" method="post">
+    <label class="form-item">
+      <span class="form-label form-label--required visuallyhidden">Ваше имя</span>
+      <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
+    </label>
+
+    <label class="form-item">
+      <span class="form-label form-label--required visuallyhidden">Выберите карту</span>
+      <div class="custom-select">
+        <select class="form-control" name="card">
+          <option disabled selected>Выберите карту</option>
+          <option value="day">Дневная карта</option>
+          <option value="unlimited">Безлимитная карта</option>
+        </select>
+      </div>
+    </label>
+
+    <label class="form-item">
+      <span class="form-label form-label--required visuallyhidden">Ваш телефон</span>
+      <input type="tel" name="phone" class="form-control" placeholder="Ваш телефон*" required>
+    </label>
+
+    <div class="form-submit-wrapper">
+      <button class="button form-submit" type="sumbit">Взять карту</button>
+    </div>
+  </form>
+</div>

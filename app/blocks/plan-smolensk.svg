@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871 494">
+  <title>plan-smolensk</title>
+  <g id="areas">
+    <polygon class="plan-area" id="area-1" points="120 298 362 298 362 373 545 373 545 314 537 314 537 8 120 8 120 298" fill="#ff7c53"/>
+    <polygon class="plan-area" id="area-2" points="615 314 795 314 795 253 863 253 863 8 615 8 615 314" fill="#00cbbb"/>
+    <polygon class="plan-area" id="area-3" points="8 373 93 373 93 298 120 298 120 8 8 8 8 373" fill="#c5a5e0"/>
+    <rect class="plan-area" id="area-4" x="537" y="8" width="78" height="306" fill="#3fa8f4"/>
+    <path class="plan-area" id="area-5" d="M485,440V404H233v51H185v62H596V440Zm-47-6H390V415h48Z" transform="translate(-51 -31)" fill="#537dcf"/>
+    <path class="plan-area" id="area-6" d="M607,404v36H596v77H914V404Zm90,30H649V415h48Z" transform="translate(-51 -31)" fill="#f270b8"/>
+    <rect class="plan-area" id="area-7" x="134" y="373" width="48" height="51" fill="#85c2ba"/>
+    <rect class="plan-area" id="area-8" x="93" y="298" width="92" height="75" fill="#ff5b63"/>
+    <rect class="plan-area" id="area-9" x="185" y="298" width="77" height="75" fill="#22b473"/>
+    <rect class="plan-area" id="area-10" x="262" y="298" width="100" height="75" fill="#ffc62f"/>
+  </g>
+  <g id="markers-areas">
+    <g id="marker-area-1">
+      <g>
+        <path d="M394,197a10,10,0,1,1,10-10A10,10,0,0,1,394,197Z" transform="translate(-51 -31)"/>
+        <path d="M394,178a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(340.7 159.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">1</text>
+    </g>
+    <g id="marker-area-2">
+      <g>
+        <path d="M784,197a10,10,0,1,1,10-10A10,10,0,0,1,784,197Z" transform="translate(-51 -31)"/>
+        <path d="M784,178a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(729.7 159.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">2</text>
+    </g>
+    <g id="marker-area-3">
+      <g>
+        <path d="M112,197a10,10,0,1,1,10-10A10,10,0,0,1,112,197Z" transform="translate(-51 -31)"/>
+        <path d="M112,178a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(57.8 159.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">3</text>
+    </g>
+    <g id="marker-area-4">
+      <g>
+        <path d="M624,197a10,10,0,1,1,10-10A10,10,0,0,1,624,197Z" transform="translate(-51 -31)"/>
+        <path d="M624,178a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(569.7 159.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">4</text>
+    </g>
+    <g id="marker-area-5">
+      <g>
+        <path d="M376,477a10,10,0,1,1,10-10A10,10,0,0,1,376,477Z" transform="translate(-51 -31)"/>
+        <path d="M376,458a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(321.7 439.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">5</text>
+    </g>
+    <g id="marker-area-6">
+      <g>
+        <path d="M770,477a10,10,0,1,1,10-10A10,10,0,0,1,770,477Z" transform="translate(-51 -31)"/>
+        <path d="M770,458a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(715.7 439.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">6</text>
+    </g>
+    <g id="marker-area-7">
+      <g>
+        <path d="M207,440a10,10,0,1,1,10-10A10,10,0,0,1,207,440Z" transform="translate(-51 -31)"/>
+        <path d="M207,421a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(153 402.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">7</text>
+    </g>
+    <g id="marker-area-8">
+      <g>
+        <path d="M192,375a10,10,0,1,1,10-10A10,10,0,0,1,192,375Z" transform="translate(-51 -31)"/>
+        <path d="M192,356a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(137.7 337.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">8</text>
+    </g>
+    <g id="marker-area-9">
+      <g>
+        <path d="M278,375a10,10,0,1,1,10-10A10,10,0,0,1,278,375Z" transform="translate(-51 -31)"/>
+        <path d="M278,356a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(223.7 337.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">9</text>
+    </g>
+    <g id="marker-area-10">
+      <g>
+        <path d="M361,375a10,10,0,1,1,10-10A10,10,0,0,1,361,375Z" transform="translate(-51 -31)"/>
+        <path d="M361,356a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-2a11,11,0,1,0,11,11,11,11,0,0,0-11-11Z" transform="translate(-51 -31)" fill="#fff"/>
+      </g>
+      <text transform="translate(304.3 337.6)" font-size="11" fill="#fff" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700">10</text>
+    </g>
+  </g>
+  <g id="frame">
+    <rect x="8" y="8" width="855" height="478" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="16"/>
+    <line x1="26" y1="373" x2="8" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="434" y1="373" x2="52" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="120" y1="47" x2="120" y2="247" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="537" y1="43" x2="537" y2="288" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="615" y1="43" x2="615" y2="288" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="134" y1="469" x2="134" y2="486" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="134" y1="414" x2="134" y2="443" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="134" y1="373" x2="134" y2="388" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="120" y1="429.5" x2="134" y2="429.5" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="8" y1="429.5" x2="94.4" y2="429.5" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="317 298 362 298 362 373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="236" y1="298" x2="291" y2="298" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="150" y1="298" x2="210" y2="298" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="93 373 93 298 124 298" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="185" y1="373" x2="185" y2="298" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="262" y1="373" x2="262" y2="298" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="182 373 182 424 134 424" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="435" y1="409" x2="435" y2="460" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="545" y1="409" x2="545" y2="486" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="387 409 653 409 653 460" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="556 409 556 373 434 373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="434" y1="373" x2="434" y2="409" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="463" y1="373" x2="463" y2="409" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="496" y1="373" x2="496" y2="409" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="527" y1="373" x2="527" y2="409" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="575" y1="373" x2="666" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="832" y1="373" x2="863" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="742" y1="373" x2="806" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="806 253 795 253 795 314 795 373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="863" y1="253" x2="832" y2="253" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <line x1="545" y1="356" x2="545" y2="373" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <polyline points="795 314 545 314 545 330" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="4"/>
+    <rect x="123.5" y="417.5" width="14.9" height="48" transform="translate(-361.5 541.5) rotate(-90)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="60.8" y1="418" x2="60.8" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="65.6" y1="418" x2="65.6" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="70.4" y1="418" x2="70.4" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="75.2" y1="418" x2="75.2" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="80" y1="418" x2="80" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="84.8" y1="418" x2="84.8" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="94.4" y1="418" x2="94.4" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="99.2" y1="418" x2="99.2" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="89.6" y1="418" x2="89.6" y2="403.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <g>
+      <line x1="56" y1="410.5" x2="101.6" y2="410.5" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M138.9,451.1a1,1,0,0,1,.3-1.4l12.9-8.2-12.9-8.2a1,1,0,0,1,1.1-1.7l14.2,9.1a1,1,0,0,1,0,1.7l-14.2,9.1-.5.2A1,1,0,0,1,138.9,451.1Z" transform="translate(-51 -31)" fill="#394352"/>
+    </g>
+    <rect x="123.5" y="398.6" width="14.9" height="48" transform="translate(502.6 260.6) rotate(90)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="99.2" y1="384.1" x2="99.2" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="94.4" y1="384.1" x2="94.4" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="89.6" y1="384.1" x2="89.6" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="84.8" y1="384.1" x2="84.8" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="80" y1="384.1" x2="80" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="75.2" y1="384.1" x2="75.2" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="65.6" y1="384.1" x2="65.6" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="60.8" y1="384.1" x2="60.8" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="70.4" y1="384.1" x2="70.4" y2="399.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <g>
+      <line x1="104" y1="391.6" x2="58.4" y2="391.6" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M123.1,413a1,1,0,0,1-.3,1.4l-12.9,8.2,12.9,8.2a1,1,0,0,1-1.1,1.7l-14.2-9.1a1,1,0,0,1,0-1.7l14.2-9.1.5-.2A1,1,0,0,1,123.1,413Z" transform="translate(-51 -31)" fill="#394352"/>
+    </g>
+    <rect x="404.5" y="400.5" width="19" height="48" transform="translate(787.5 -20.5) rotate(90)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="382.2" y1="384" x2="382.2" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="377.4" y1="384" x2="377.4" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="372.6" y1="384" x2="372.6" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="367.8" y1="384" x2="367.8" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="363" y1="384" x2="363" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="358.2" y1="384" x2="358.2" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="348.6" y1="384" x2="348.6" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="343.8" y1="384" x2="343.8" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="353.4" y1="384" x2="353.4" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <rect x="663.5" y="400.5" width="19" height="48" transform="translate(1046.5 -279.5) rotate(90)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="641.2" y1="384" x2="641.2" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="636.4" y1="384" x2="636.4" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="631.6" y1="384" x2="631.6" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="626.8" y1="384" x2="626.8" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="622" y1="384" x2="622" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="617.2" y1="384" x2="617.2" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="607.6" y1="384" x2="607.6" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="602.8" y1="384" x2="602.8" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="612.4" y1="384" x2="612.4" y2="403" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <rect x="801" y="297.6" width="22.9" height="58.37" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="801" y1="303.5" x2="823.9" y2="303.5" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="309.3" x2="823.9" y2="309.3" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="315.1" x2="823.9" y2="315.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="321" x2="823.9" y2="321" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="326.8" x2="823.9" y2="326.8" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="332.7" x2="823.9" y2="332.7" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="344.3" x2="823.9" y2="344.3" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="350.2" x2="823.9" y2="350.2" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="801" y1="338.5" x2="823.9" y2="338.5" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <g>
+      <line x1="812.5" y1="297.6" x2="812.5" y2="353.6" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M853.9,370.9a1,1,0,0,1,1.4.3l8.2,12.9,8.2-12.9a1,1,0,0,1,1.7,1.1l-9.1,14.2a1,1,0,0,1-1.7,0l-9.1-14.2a1,1,0,0,1,.3-1.4Z" transform="translate(-51 -31)" fill="#394352"/>
+    </g>
+    <rect x="881.1" y="328.6" width="22.9" height="58.37" transform="translate(1734.1 684.6) rotate(180)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="853" y1="350.2" x2="830.1" y2="350.2" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="344.3" x2="830.1" y2="344.3" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="338.5" x2="830.1" y2="338.5" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="332.7" x2="830.1" y2="332.7" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="326.8" x2="830.1" y2="326.8" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="321" x2="830.1" y2="321" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="309.3" x2="830.1" y2="309.3" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="303.5" x2="830.1" y2="303.5" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <line x1="853" y1="315.1" x2="830.1" y2="315.1" fill="none" stroke="#394352" stroke-miterlimit="10"/>
+    <g>
+      <line x1="841.5" y1="356" x2="841.5" y2="300" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M902.1,344.7a1,1,0,0,1-1.4-.3l-8.2-12.9-8.2,12.9a1,1,0,0,1-1.7-1.1l9.1-14.2a1,1,0,0,1,1.7,0l9.1,14.2a1,1,0,0,1-.3,1.4Z" transform="translate(-51 -31)" fill="#394352"/>
+    </g>
+    <g id="doors">
+      <g id="door">
+        <g id="door-2" data-name="door">
+          <path d="M343.5,327.5v3h-1v-3h1m.5-.5h-2v4h2v-4Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M346,306v21h-2V306h2m.5-.5h-3v22h3v-22Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M368,329a23,23,0,0,0-22-23" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+      <g id="door_copy" data-name="door copy">
+        <g id="door-3" data-name="door">
+          <path d="M262.5,327.5v3h-1v-3h1m.5-.5h-2v4h2v-4Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M265,306v21h-2V306h2m.5-.5h-3v22h3v-22Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M287,329a23,23,0,0,0-22-23" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+      <g id="door_copy_2" data-name="door copy 2">
+        <g id="door-4" data-name="door">
+          <path d="M176.5,327.5v3h-1v-3h1m.5-.5h-2v4h2v-4Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M179,306v21h-2V306h2m.5-.5h-3v22h3v-22Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M201,329a23,23,0,0,0-22-23" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+      <g id="door_copy_3" data-name="door copy 3">
+        <g id="door-5" data-name="door">
+          <path d="M186.5,498.5v1h-3v-1h3m.5-.5h-4v2h4v-2Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M208,496v2H187v-2h21m.5-.5h-22v3h22v-3Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M185,474a23,23,0,0,1,23,22" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+      <g id="door_copy_4" data-name="door copy 4">
+        <g id="door-6" data-name="door">
+          <path d="M858.5,402.5v3h-1v-3h1m.5-.5h-2v4h2v-4Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M861,406v21h-2V406h2m.5-.5h-3v22h3v-22Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M883,404a23,23,0,0,1-22,23" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+      <g id="door_copy_5" data-name="door copy 5">
+        <g id="door-7" data-name="door">
+          <path d="M858.5,402.5v3h-1v-3h1m.5-.5h-2v4h2v-4Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M861,406v21h-2V406h2m.5-.5h-3v22h3v-22Z" transform="translate(-51 -31)" fill="#394352"/>
+          <path d="M883,404a23,23,0,0,1-22,23" transform="translate(-51 -31)" fill="none" stroke="#394352" stroke-miterlimit="10" stroke-width="0.25"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

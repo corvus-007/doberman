@@ -4,7 +4,10 @@
 }
 
 .club-cards__compare {
+  width: 100%;
   border-spacing: 5px;
+  font-size: rem(15);
+
   th,
   td {
     padding: 0.8rem;

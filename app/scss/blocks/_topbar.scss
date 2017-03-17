@@ -1,7 +1,12 @@
 .topbar {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: rem(10);
   padding-bottom: rem(10);
   background-color: $bg-color-4;
+  z-index: 2;
 }
 
 .topbar__inner {
@@ -12,6 +17,7 @@
 
 .topbar__phone {
   margin-right: 1rem;
+  font-size: rem(15);
 }
 
 .topbar__callback {
