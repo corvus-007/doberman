@@ -22,7 +22,6 @@ ul:not([class]) {
       height: rem($dimensions-marker);
       box-sizing: border-box;
       border-radius: 50%;
-      // border: 2px solid $accent-color;
       background-color: $accent-color;
     }
   }

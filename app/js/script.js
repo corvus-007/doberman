@@ -100,6 +100,38 @@ $(function() {
 
 
 
+  /*====================================
+  =            Top services            =
+  ====================================*/
+
+  var topServices = document.querySelector('.top-services');
+
+  if (topServices) {
+    var topServiceItems = topServices.querySelectorAll('.top-services__item');
+    var topServicesHeight = topServices.offsetHeight;
+    var adjacentSide = (topServicesHeight / 2);
+    var adjacentAngle = Math.abs(getComputedStyle(topServiceItems[0]).transform.split(', ')[2]);
+    var oppositeSide = Math.ceil(adjacentSide * adjacentAngle);
+
+    $(topServiceItems).each(function(index, el) {
+      var topServiceBg = this.querySelector('.top-service__bg');
+      if (index === 0) {
+        this.style.cssText = 'margin-left: -' + oppositeSide + 'px; padding-left: ' + oppositeSide + 'px;';
+        topServiceBg.style.right = '-' + oppositeSide + 'px';
+      } else if (index === (topServiceItems.length - 1)) {
+        this.style.cssText = 'margin-right: -' + oppositeSide + 'px; padding-right: ' + oppositeSide + 'px;';
+        topServiceBg.style.left = '-' + oppositeSide + 'px';
+      } else {
+        topServiceBg.style.left = '-' + oppositeSide + 'px';
+        topServiceBg.style.right = '-' + oppositeSide + 'px';
+      }
+    });
+  }
+
+  /*=====  End of Top services  ======*/
+
+
+
   /*==================================
   =            Input mask            =
   ==================================*/

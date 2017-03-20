@@ -25,5 +25,8 @@
 
   .top-services__item {
     @include createFlexColumn(3);
+
+    flex-grow: 1;
+    max-width: none;
   }
 }

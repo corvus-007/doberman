@@ -72,11 +72,11 @@
 @media (min-width: $media-laptop-up) {
   .top-service {
     // overflow: visible;
-    // transform: skew($angel-skew * -1) translate3d(0, 0, 0);
+    transform: skew($angel-skew * -1) translate3d(0, 0, 0);
   }
 
   .top-service__inner,
   .top-service__bg {
-    // transform: skew($angel-skew) translate3d(0, 0, 0);
+    transform: skew($angel-skew) translate3d(0, 0, 0);
   }
 }
