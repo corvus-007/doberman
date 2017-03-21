@@ -10,7 +10,7 @@
 .index-section__title {
   margin: 0;
   text-transform: uppercase;
-  font-size: rem(36);
+  font-size: rem(24);
   font-weight: 700;
   font-style: italic;
   text-align: center;
@@ -24,4 +24,11 @@
 
 .index-section__body {
 
+}
+
+
+@media (min-width: $media-tablet-up) {
+  .index-section__title {
+    font-size: rem(36);
+  }
 }

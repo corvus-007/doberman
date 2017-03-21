@@ -81,7 +81,7 @@ $(function() {
       dots: true,
       centerMode: true,
       variableWidth: true,
-      autoplay: true,
+      // autoplay: true,
       appendArrows: '.slider-images__arrows-holder',
       prevArrow: '<button type="button" class="slick-prev">\
         <svg class="slider-images__arrow-icon svg-icon">\
@@ -93,6 +93,22 @@ $(function() {
           <use xlink:href="images/symbols.svg#arrow-next"></use>\
         </svg>\
       </button>',
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            arrows: false,
+            // centerMode: false,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            arrows: false,
+            centerMode: false,
+          }
+        }
+      ]
     });
   }
 

@@ -93,6 +93,7 @@
 .slider-images__image {
   margin-left: auto;
   margin-right: auto;
+  width: 100vw;
 }
 
 .slider-images__arrows-holder {
@@ -102,4 +103,10 @@
   top: 50%;
   z-index: 1;
   transform: translateY(calc(-50% - 80px));
+}
+
+@media (min-width: $media-mobile-up) {
+  .slider-images__image {
+    width: auto;
+  }
 }
