@@ -3,21 +3,21 @@ $button-great-angle: $angel-skew;
 .button-great {
   position: relative;
   display: inline-block;
-  padding: 1.3em 1.7em;
-  padding-right: 6em;
+  padding: 1em;
   border: 2px solid $accent-color;
   transform: translate3d(0, 0, 0) skew($button-great-angle * -1);
   text-transform: uppercase;
   text-decoration: none;
   line-height: normal;
   outline: none;
-  font-size: rem(15);
+  font-size: rem(13);
   text-align: left;
   font-style: italic;
   user-select: none;
   color: #fff;
   cursor: pointer;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .button-great__revert {
@@ -34,22 +34,35 @@ $button-great-angle: $angel-skew;
 }
 
 .button-great__additional {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 1em 1.2em;
-  box-sizing: border-box;
-  background-color: $accent-color;
-  transform: translate3d(1em, 1em, 0) ;
-  transition: transform 0.3s;
+  display: none;
 }
 
-.button-great:hover .button-great__additional {
-  transform: translate3d(1.5em, 1em, 0);
-}
+@media (min-width: 667px) {
+  .button-great {
+    padding: 1.3em 1.7em;
+    padding-right: 6em;
+    font-size: rem(15);
+  }
 
-.button-great__icon {
-  color: #000;
-  width: rem(30);
-  height: rem(30);
+  .button-great__additional {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding: 1em 1.2em;
+    box-sizing: border-box;
+    background-color: $accent-color;
+    transform: translate3d(1em, 1em, 0) ;
+    transition: transform 0.3s;
+  }
+
+  .button-great:hover .button-great__additional {
+    transform: translate3d(1.5em, 1em, 0);
+  }
+
+  .button-great__icon {
+    color: #000;
+    width: rem(30);
+    height: rem(30);
+  }
 }

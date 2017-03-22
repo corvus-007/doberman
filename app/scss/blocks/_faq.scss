@@ -9,8 +9,16 @@
 
   p {
     margin: 0;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 1rem;
     font-size: rem(16);
     color: $light-color;
+  }
+}
+
+@media (min-width: $media-tablet-up) {
+  .faq {
+    p {
+      padding: 0.5rem 4rem;
+    }
   }
 }

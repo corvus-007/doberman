@@ -41,10 +41,15 @@
 }
 
 .club-cards__image {
-  margin-top: -5rem;
   margin-bottom: rem(30);
 }
 
 .club-cards__button {
   
+}
+
+@media (min-width: 568px) {
+  .club-cards__image {
+    margin-top: -5rem;
+  }
 }

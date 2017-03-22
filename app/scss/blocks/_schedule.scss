@@ -15,9 +15,7 @@
 }
 
 .schedule__controls {
-  position: relative;
-  left: 0;
-  right: 0;
+  display: none;
 }
 
 .schedule__control {
@@ -40,4 +38,13 @@
 
 .tabs_box_navigation.sf-timetable-menu {
   display: none;
+}
+
+@media (min-width: $media-tablet-up) {
+  .schedule__controls {
+    position: relative;
+    left: 0;
+    right: 0;
+    display: block;
+  }
 }

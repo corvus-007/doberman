@@ -1,11 +1,20 @@
 .coach {
-  padding: 50px;
   box-sizing: border-box;
+  padding: 20px 15px;
   text-align: center;
   font-size: rem(14);
   transition: background-color 0.35s;
+
   &:hover {
     background-color: $bg-color-3;
+  }
+
+  @media (min-width: 568px) {
+    padding: 40px;
+  }
+
+  @media ($media-laptop-up) {
+    padding: 50px;
   }
 }
 
@@ -96,4 +105,8 @@
 .coach__more-link {
   @include dotted-link();
   color: currentColor;
+}
+
+@media (min-width: 375px) {
+
 }

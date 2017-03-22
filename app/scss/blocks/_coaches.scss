@@ -9,7 +9,7 @@
 }
 
 
-@media (min-width: $media-mobile-up) {
+@media (min-width: 375px) {
   .coaches__item {
     @include createFlexColumn(6);
   }
