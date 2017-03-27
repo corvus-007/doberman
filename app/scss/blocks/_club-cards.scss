@@ -1,4 +1,5 @@
 .club-cards {
+  padding-top: 50px;
   padding-bottom: 50px;
   background-color: $bg-color-2;
 }
@@ -16,14 +17,26 @@
   }
 
   thead {
+    display: block;
+
+    tr {
+      display: block;
+    }
+
     th {
+      font-weight: normal;
+      display: block;
       padding-bottom: rem(45);
     }
   }
 
   tbody {
+    display: none;
+
     tr {
+
       &:nth-child(odd) {
+
         td {
           background-color: #232221;
         }
@@ -41,15 +54,53 @@
 }
 
 .club-cards__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: rem(30);
 }
 
 .club-cards__button {
-  
+
 }
 
-@media (min-width: 568px) {
+.club-cards__more-wrapper {
+  margin-top: 1rem;
+}
+
+.club-cards__more {
+  @include dotted-link();
+  font-size: 1.1em;
+}
+
+@media (min-width: $media-laptop-up) {
+  .club-cards {
+    padding-top: 0;
+  }
+
+  .club-cards__compare {
+    thead {
+      display: table-header-group;
+
+      tr {
+        display: table-row;
+      }
+
+      th {
+        display: table-cell;
+      }
+    }
+
+    tbody {
+      display: table-row-group;
+    }
+  }
+
   .club-cards__image {
     margin-top: -5rem;
+  }
+
+  .club-cards__more-wrapper {
+    display: none;
   }
 }

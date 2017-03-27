@@ -15,6 +15,7 @@ $(function() {
 
   /*=====  End of Index slider  ======*/
 
+
   /*===================================
   =            Choice city            =
   ===================================*/
@@ -40,28 +41,30 @@ $(function() {
 
   var $header = $('.site-header');
   var $topbar = $('.topbar');
-  var headerHeight = $header.innerHeight();
-  var topbarHeight = $topbar.innerHeight();
-  var scrollPosition = 0;
-
-  $topbar.css('margin-bottom', headerHeight + 'px');
-  $header.css('top', topbarHeight + 'px');
 
   if ('matchMedia' in window) {
     if (matchMedia('(min-width: 1024px)').matches) {
 
-      $(window).on('scroll', function() {
-        scrollPosition = $(document).scrollTop();
-        if (topbarHeight <= scrollPosition) {
-          $header
-            .css('top', 0)
-            .addClass('site-header--sticky');
-        } else {
-          $header
-            .css('top', topbarHeight + 'px')
-            .removeClass('site-header--sticky');
-        }
+      $('.logo__image').on('load', function(event) {
+        
+        var topbarHeight = $topbar[0].offsetHeight;
+        $header.css('top', topbarHeight + 'px');
+        $header.css({'top': topbarHeight, 'position': 'absolute'})
+        var headerHeight = $header[0].offsetHeight;
+        var scrollPosition = 0;
+
+        $topbar.css('margin-bottom', headerHeight + 'px');
+
+        $(window).on('scroll', function() {
+          scrollPosition = $(document).scrollTop();
+          if (topbarHeight <= scrollPosition) {
+            $header.css({'top': 0, 'position': 'fixed'})
+          } else {
+            $header.css({'top': topbarHeight, 'position': 'absolute'})
+          }
+        });
       });
+
     }
   }
 
@@ -243,7 +246,24 @@ $(function() {
 
   /*=====  End of Contacts map  ======*/
 
+  clearingSheduleItem();
+  easeTime();
+
 });
+
+function clearingSheduleItem() {
+  Array.prototype.forEach.call(document.querySelectorAll('.event_header'), function(item) {
+    if (item.textContent.trim() === '') {
+      item.remove();
+    }
+  });
+}
+
+function easeTime() {
+  Array.prototype.forEach.call(document.querySelectorAll('.tt_items_list .value'), function(item) {
+    item.textContent = item.textContent.trim().split(' - ')[0];
+  });
+}
 
 
 function initializeMap() {

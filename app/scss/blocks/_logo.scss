@@ -9,9 +9,17 @@
 }
 
 .logo__text {
-  max-width: rem(185);
-  margin: 0;
-  font-size: rem(14);
-  font-weight: normal;
-  color: $muted-color;
+  display: none;
+}
+
+
+@media (min-width: $media-laptop-up) {
+  .logo__text {
+    display: block;
+    max-width: rem(185);
+    margin: 0;
+    font-size: rem(14);
+    font-weight: normal;
+    color: $muted-color;
+  }
 }

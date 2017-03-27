@@ -1,5 +1,4 @@
 .site-header {
-  position: absolute;
   left: 0;
   right: 0;
   padding-top: rem(15);
@@ -8,15 +7,16 @@
   box-shadow: 0 2px 19px 0 #070606;
   z-index: 2;
 
-  &--sticky {
-    position: fixed;
-  }
+  // &--sticky {
+  //   position: fixed;
+  // }
 }
 
 .site-header__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .site-header__logo {
@@ -25,4 +25,12 @@
 
 .site-header__nav {
 
+}
+
+@media (min-width: $media-tablet-up) {
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }

@@ -1,12 +1,13 @@
 .top-service {
-  color: currentColor;
-  padding: 160px 1em;
-  font-style: italic;
-  text-align: center;
-  box-sizing: border-box;
   position: relative;
   z-index: 1;
+  padding: 160px 1em;
+  font-style: italic;
+  color: #000;
+  text-align: center;
+  box-sizing: border-box;
   overflow: hidden;
+  transition: none;
 
   &::before {
     content: "";
@@ -41,7 +42,7 @@
 }
 
 .top-service:hover .top-service__bg {
-  filter: blur(3px);
+  // filter: blur(3px);
 }
 
 .top-service__inner {
@@ -59,17 +60,24 @@
   font-size: rem(23);
   font-weight: 700;
   text-transform: uppercase;
+  color: $base-color;
+  transition: color 0.25s;
 
   span {
     display: block;
   }
 }
 
+.top-service:hover .top-service__title {
+  color: $accent-color;
+}
+
 .top-service__button {
   // display: block;
 }
 
-@media (min-width: $media-laptop-up) {
+
+@media (min-width: $media-laptop-up) and (min-resolution: 144dpi), (min-width: $media-laptop-up) and (min-resolution: 1.5dppx) {
   .top-service {
     // overflow: visible;
     transform: skew($angel-skew * -1) translate3d(0, 0, 0);

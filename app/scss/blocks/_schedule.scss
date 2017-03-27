@@ -2,45 +2,99 @@
   margin-top: 50px;
 }
 
-.schedule__content-wrapper {
-  margin-left: 45px;
-  margin-right: 45px;
-  overflow-x: hidden;
-}
 
-.schedule__content {
-  transform: translateX(0);
-  will-change: transform;
-  transition: transform 0.35s linear;
-}
-
-.schedule__controls {
-  display: none;
-}
-
-.schedule__control {
-  position: absolute;
-  width: 45px;
-  height: 60px;
-  border: none;
-  background-color: $bg-events;
-  color: $accent-color;
-
-  &--prev {
-    left: 0;
-  }
-
-  &--next {
-    right: 0;
-  }
-}
 
 
 .tabs_box_navigation.sf-timetable-menu {
   display: none;
 }
 
+.schedule__controls {
+  display: none;
+}
+
+@media (max-width: $media-tablet-down) {
+  .tt_items_list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px !important;
+    background: $bg-events;
+    border-bottom-color: $bg-color-1;
+  }
+
+  .timetable_clearfix:after {
+    display: none;
+  }
+
+  .tt_timetable.small {
+    font-size: 14px;
+  }
+
+  .tt_responsive .tt_timetable.small .box_header {
+    font-size: 20px !important;
+    font-family: $primary-font;
+    color: $base-color !important;
+  }
+
+  .tt_responsive .tt_timetable.small .tt_items_list .event_header {
+    margin-top: 0;
+    font-size: 18px;
+    font-family: $primary-font;
+    color: $accent-color !important;
+  }
+
+  .tt_responsive .tt_timetable.small .tt_items_list span {
+    display: inline-block;
+    margin-top: 0.8em;
+    margin-left: 0;
+    font-family: $primary-font;
+    color: $base-color !important;
+  }
+
+  .tt_items_list .value {
+    color: $base-color !important;
+    font-size: 20px;
+  }
+
+}
+
+
 @media (min-width: $media-tablet-up) {
+  .tt_timetable .event a, .tt_timetable .event .event_header {
+    text-transform: uppercase;
+    color: $accent-color !important;
+  }
+
+  .schedule__content-wrapper {
+    margin-left: 45px;
+    margin-right: 45px;
+    overflow-x: hidden;
+  }
+
+  .schedule__content {
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.35s linear;
+  }
+
+  .schedule__control {
+    position: absolute;
+    width: 45px;
+    height: 60px;
+    border: none;
+    background-color: $bg-events;
+    color: $accent-color;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
   .schedule__controls {
     position: relative;
     left: 0;
